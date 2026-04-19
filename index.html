@@ -1,0 +1,112 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/index.html b/index.html
+new file mode 100644
+index 0000000000000000000000000000000000000000..0f795510a0a976cd7336dfd05fc54c4786690a21
+--- /dev/null
++++ b/index.html
+@@ -0,0 +1,102 @@
++<!DOCTYPE html>
++<html lang="zh-CN">
++  <head>
++    <meta charset="UTF-8" />
++    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
++    <title>个人简历 | 张三</title>
++    <link rel="preconnect" href="https://fonts.googleapis.com" />
++    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
++    <link
++      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
++      rel="stylesheet"
++    />
++    <link rel="stylesheet" href="style.css" />
++  </head>
++  <body>
++    <main class="container">
++      <section class="hero" id="top">
++        <div class="hero-content">
++          <p class="eyebrow">Personal Resume</p>
++          <h1>你好，我是张三</h1>
++          <p class="subtitle">前端工程师 / Python 开发者，专注简洁高效且有质感的数字产品设计与开发。</p>
++          <a href="#" class="btn">下载简历</a>
++        </div>
++        <div class="hero-avatar-wrap">
++          <img
++            class="hero-avatar"
++            src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=560&q=80"
++            alt="张三头像"
++          />
++        </div>
++      </section>
++
++      <section class="about section" id="about">
++        <h2>关于我</h2>
++        <p>
++          我拥有 5 年 Web 开发经验，擅长将业务目标转化为可落地的界面与系统。
++          关注设计一致性、性能优化以及用户体验，能够从 0 到 1 完成产品页面搭建。
++        </p>
++        <div class="skills" aria-label="技能标签">
++          <span>HTML</span>
++          <span>CSS</span>
++          <span>JavaScript</span>
++          <span>Python</span>
++          <span>UI Design</span>
++          <span>Responsive Design</span>
++        </div>
++      </section>
++
++      <section class="projects section" id="projects">
++        <h2>项目展示</h2>
++        <div class="project-grid">
++          <article class="project-card">
++            <img
++              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80"
++              alt="数据看板系统"
++            />
++            <div class="project-body">
++              <h3>数据看板系统</h3>
++              <p>企业运营可视化平台，支持实时图表、角色权限和多维度数据筛选。</p>
++              <a href="#">查看详情</a>
++            </div>
++          </article>
++
++          <article class="project-card">
++            <img
++              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80"
++              alt="在线学习平台"
++            />
++            <div class="project-body">
++              <h3>在线学习平台</h3>
++              <p>提供课程管理、作业提交和进度追踪，适配桌面端与移动端访问。</p>
++              <a href="#">查看详情</a>
++            </div>
++          </article>
++
++          <article class="project-card">
++            <img
++              src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=900&q=80"
++              alt="品牌官网重构"
++            />
++            <div class="project-body">
++              <h3>品牌官网重构</h3>
++              <p>基于现代设计语言升级企业官网，提升加载性能与转化率表现。</p>
++              <a href="#">查看详情</a>
++            </div>
++          </article>
++        </div>
++      </section>
++    </main>
++
++    <footer class="footer" id="contact">
++      <div class="container footer-content">
++        <div>
++          <h2>联系我</h2>
++          <p>邮箱：<a href="mailto:youremail@example.com">youremail@example.com</a></p>
++          <p>GitHub：<a href="https://github.com/yourname" target="_blank" rel="noreferrer">github.com/yourname</a></p>
++        </div>
++        <p class="copyright">© 2026 张三. All rights reserved.</p>
++      </div>
++    </footer>
++  </body>
++</html>
+ 
+EOF
+)
